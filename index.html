@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        min-width: 100vw;
+        min-height: 100vh;
+      }
+      canvas {
+        margin: auto;
+        width: 800px;
+        height: 800px;
+        display: block;
+        background-color: #fff;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="800" height="800"></canvas>
+    <div>
+        <button id="Start">Start</button><br />
+        <button id="End">End</button><br /><br />
+        <button id="Road">Road (10)</button><br />
+      <button id="Grass">Grass (50)</button><br />
+      <button id="Swamp">Swamp (150)</button><br />
+      <button id="Mountain">Mountain (1000)</button><br /><br />
+      <button id="solve">Solve</button><br/><br/>
+      <button id="Reset">Reset</button>
+    </div>
+    <script src="./astar.js"></script>
+  </body>
+</html>
