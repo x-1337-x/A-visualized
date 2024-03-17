@@ -9,8 +9,8 @@ let CELL_HEIGHT = CANVAS_HEIGHT / GRID_HEIGHT;
 
 let CELL_BORDER = Math.floor(CELL_WIDTH / 20);
 
-let endNode = { x: 3, y: 3 };
-let startNode = { x: 7, y: 5 };
+let startNode = { x: 0, y: 0 };
+let endNode = { x: 19, y: 19 };
 
 const DIAGONAL_COST = 14;
 const LINEAR_COST = 10;
@@ -208,6 +208,9 @@ function drawGrid() {
 		CELL_HEIGHT - CELL_BORDER * 2
 	);
 
+	ctx.fillStyle = 'white';
+	ctx.fillText('S', startNode.x * CELL_WIDTH + CELL_WIDTH / 3, startNode.y * CELL_HEIGHT + CELL_HEIGHT / 2);
+
 	ctx.fillStyle = 'red';
 	ctx.fillRect(
 		endNode.x * CELL_WIDTH + CELL_BORDER,
@@ -215,6 +218,9 @@ function drawGrid() {
 		CELL_WIDTH - CELL_BORDER * 2,
 		CELL_HEIGHT - CELL_BORDER * 2
 	);
+
+	ctx.fillStyle = 'white';
+	ctx.fillText('E', endNode.x * CELL_WIDTH + CELL_WIDTH / 3, endNode.y * CELL_HEIGHT + CELL_HEIGHT / 2);
 }
 
 function drawStats(gScore, fScore) {
